@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+.navbar {
+  padding: 0.5rem 1rem !important;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 3 !important;
+}
+
+.h-100vh {
+  padding-top: 75px;
+  min-height: 100vh !important;
+}
+
+.dark-mode .navbar {
+  background-color: #610094 !important;
+}
+
+.light-mode .navbar {
+  background-color: #007FFF;
+}
+
+.login-animation {
+  max-width: 20rem;
+}/*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 const initialState={
     themeMode:'light'
-}
+}as any
 
 export const themeSlice=createSlice({
     name:'themeSlice',
