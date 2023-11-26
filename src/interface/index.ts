@@ -20,5 +20,14 @@ export interface FormInputProps {
     required:boolean;
     placeholder:string;
     register:any;
+    error:boolean;
+    endDecorator:ReactNode |null;
+    startDecorator:ReactNode|null;
     sx:any
+}
+
+export interface AuthInputs{
+    name?:string;
+    email:string;
+    password:string
 }

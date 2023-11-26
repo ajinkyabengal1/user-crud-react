@@ -28,4 +28,25 @@
 
 .login-animation {
   max-width: 20rem;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none !important;
+}
+
+.hr {
+  position: absolute !important;
+  top: 50% !important;
+  width: 95% !important;
+  background-color: rgb(215, 213, 213) !important;
+  margin-left: 1rem !important;
+}
+
+.vr {
+  position: absolute !important;
+  left: 48%;
+  height: 95% !important;
+  margin-top: 0.5rem !important;
+  background-color: rgb(215, 213, 213) !important;
 }/*# sourceMappingURL=style.css.map */

@@ -4,10 +4,12 @@ import Navigation from '../components/Navigation'
 
 const Layout = (props:LayoutPropsType) => {
   return (
+    <div  id="demo_dark-mode-by-default">
     <Sheet>
       <Navigation/>
       {props.children}
     </Sheet>
+    </div>
   )
 }
 

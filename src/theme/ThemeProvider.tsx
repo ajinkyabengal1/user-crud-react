@@ -73,11 +73,17 @@ const ThemeProvider = (props:ThemePropType) => {
   return (
     <CssVarsProvider
     defaultMode={props.mode}
+    // the props below are specific to this demo,
+    // you might not need them in your app.
+    //
     theme={theme}
-    
+    // the selector to apply CSS theme variables stylesheet.
     colorSchemeSelector="#demo_dark-mode-by-default"
-   
+    //
+    // the local storage key to use
     modeStorageKey="demo_dark-mode-by-default"
+    //
+    // set as root provider
     disableNestedContext
   >
             {props.children}

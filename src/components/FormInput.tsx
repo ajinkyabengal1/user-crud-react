@@ -54,32 +54,46 @@ const StyledLabel = styled('label')(({ theme }) => ({
   transition: 'all 150ms cubic-bezier(0.4, 0, 0.2, 1)',
 }));
 
-const InnerInput = React.forwardRef<
+
+
+const FormInput=({
+  name,
+  label,
+  type,
+  placeholder,
+  required,
+  register,
+  startDecorator,
+  endDecorator,
+  error,
+  sx
+}:FormInputProps)=> {
+  const InnerInput = React.forwardRef<
   HTMLInputElement,
   JSX.IntrinsicElements['input']
 >(function InnerInput(props, ref) {
   const id = React.useId();
   return (
     <React.Fragment>
-      <StyledInput {...props} ref={ref} id={id} />
-      <StyledLabel htmlFor={id}>Label</StyledLabel>
+      <StyledInput {...props} ref={ref} id={id} {...register(name,{required:required})} />
+      <StyledLabel htmlFor={id}>{label}</StyledLabel>
     </React.Fragment>
   );
 });
-
-const FormInput = () => {
   return (
     <Input
-    //   endDecorator={<CheckCircleOutlined />}
+      startDecorator={startDecorator}
+      endDecorator={endDecorator}
+      error={error}
       slots={{ input: InnerInput }}
-      slotProps={{ input: { placeholder:'name',type:'text'} }}
-      variant='outlined'
+      slotProps={{ input: { placeholder, type } }}
       sx={{
-        '--Input-minHeight': '56px',
+        '--Input-minHeight': '46px',
         '--Input-radius': '6px',
+        ...sx
       }}
     />
-  )
+  );
 }
 
 export default FormInput
